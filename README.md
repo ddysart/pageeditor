@@ -1,4 +1,4 @@
-pageeditor
+Page Editor Best Practices Sample Code
 ==========
 
-Demo code from Milwaukee Sitecore Developers Meetup
+Demo/Sample code from Milwaukee Sitecore Developers Meetup presentation
