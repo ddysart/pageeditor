@@ -57,10 +57,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\bacon.jpg" />
+    <Content Include="Content\assets\burger.jpg" />
+    <Content Include="Content\assets\chicken.jpg" />
+    <Content Include="Content\assets\drink.jpg" />
+    <Content Include="Content\assets\kabobs.jpg" />
+    <Content Include="Content\assets\kevin.jpg" />
+    <Content Include="Content\assets\slaw.jpg" />
+    <Content Include="Content\assets\sprouts.jpg" />
+    <Content Include="Content\assets\steak.jpg" />
+    <Content Include="Content\assets\tracks.jpg" />
+    <Content Include="Content\assets\veggies.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="layouts\PageEditor\MainLayout.aspx" />
     <Content Include="packages.config" />
@@ -74,6 +86,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\scripts.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
   </ItemGroup>
