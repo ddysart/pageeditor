@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageEditor.Web", "PageEdito
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.PageEditor.Master", "Sitecore.PageEditor.Master\Sitecore.PageEditor.Master.scproj", "{FDD0DE4D-6EEB-48EF-8139-E9C0F164F949}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageEditor.Classes", "PageEditor.Classes\PageEditor.Classes.csproj", "{A03B95B5-54D8-4D30-A82C-C8F4FED42DC1}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.PageEditor.Core", "Sitecore.PageEditor.Core\Sitecore.PageEditor.Core.scproj", "{16AFA7CD-EB8D-4451-ABD7-0AC76D662F79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,16 @@ Global
 		{FDD0DE4D-6EEB-48EF-8139-E9C0F164F949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD0DE4D-6EEB-48EF-8139-E9C0F164F949}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FDD0DE4D-6EEB-48EF-8139-E9C0F164F949}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A03B95B5-54D8-4D30-A82C-C8F4FED42DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03B95B5-54D8-4D30-A82C-C8F4FED42DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03B95B5-54D8-4D30-A82C-C8F4FED42DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03B95B5-54D8-4D30-A82C-C8F4FED42DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16AFA7CD-EB8D-4451-ABD7-0AC76D662F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16AFA7CD-EB8D-4451-ABD7-0AC76D662F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16AFA7CD-EB8D-4451-ABD7-0AC76D662F79}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{16AFA7CD-EB8D-4451-ABD7-0AC76D662F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16AFA7CD-EB8D-4451-ABD7-0AC76D662F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16AFA7CD-EB8D-4451-ABD7-0AC76D662F79}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

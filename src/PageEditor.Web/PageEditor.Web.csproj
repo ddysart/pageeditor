@@ -38,7 +38,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper">
+      <HintPath>..\packages\Glass.Mapper.3.0.11.23\lib\net45\Glass.Mapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc">
+      <HintPath>..\packages\Glass.Mapper.Sc.3.2.0.39\lib\net45\Glass.Mapper.Sc.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Sc.CastleWindsor">
+      <HintPath>..\packages\Glass.Mapper.Sc.CastleWindsor.3.2.0.19\lib\net45\Glass.Mapper.Sc.CastleWindsor.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Client">
+      <HintPath>..\..\..\..\Sitecore\PageEditor\Website\bin\Sitecore.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\..\..\..\Sitecore\PageEditor\Website\bin\Sitecore.Kernel.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -55,42 +80,40 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\assets\bacon.jpg" />
-    <Content Include="Content\assets\burger.jpg" />
-    <Content Include="Content\assets\chicken.jpg" />
-    <Content Include="Content\assets\drink.jpg" />
-    <Content Include="Content\assets\kabobs.jpg" />
-    <Content Include="Content\assets\kevin.jpg" />
-    <Content Include="Content\assets\slaw.jpg" />
-    <Content Include="Content\assets\sprouts.jpg" />
-    <Content Include="Content\assets\steak.jpg" />
-    <Content Include="Content\assets\tracks.jpg" />
-    <Content Include="Content\assets\veggies.jpg" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\styles.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\bacon.jpg" />
+    <Content Include="assets\burger.jpg" />
+    <Content Include="assets\chicken.jpg" />
+    <Content Include="assets\drink.jpg" />
+    <Content Include="assets\kabobs.jpg" />
+    <Content Include="assets\kevin.jpg" />
+    <Content Include="assets\slaw.jpg" />
+    <Content Include="assets\sprouts.jpg" />
+    <Content Include="assets\steak.jpg" />
+    <Content Include="assets\tracks.jpg" />
+    <Content Include="assets\veggies.jpg" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="HTMLTemplate\index.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\scripts.js" />
     <Content Include="layouts\PageEditor\MainLayout.aspx" />
+    <Content Include="layouts\PageEditor\sublayouts\Carousel.ascx" />
+    <Content Include="layouts\PageEditor\sublayouts\CarouselSlide.ascx" />
+    <Content Include="layouts\PageEditor\sublayouts\Featurette.ascx" />
+    <Content Include="layouts\PageEditor\sublayouts\MainContainer.ascx" />
+    <Content Include="layouts\PageEditor\sublayouts\HeaderNavigation.ascx" />
+    <Content Include="layouts\PageEditor\sublayouts\RelatedPages.ascx" />
     <Content Include="packages.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery-1.9.0.min.js" />
-    <Content Include="Scripts\scripts.js" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-1.9.0.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\GlassMapperSc.cs" />
+    <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="layouts\PageEditor\MainLayout.aspx.cs">
       <DependentUpon>MainLayout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,9 +121,54 @@
     <Compile Include="layouts\PageEditor\MainLayout.aspx.designer.cs">
       <DependentUpon>MainLayout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\Carousel.ascx.cs">
+      <DependentUpon>Carousel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\Carousel.ascx.designer.cs">
+      <DependentUpon>Carousel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\CarouselSlide.ascx.cs">
+      <DependentUpon>CarouselSlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\CarouselSlide.ascx.designer.cs">
+      <DependentUpon>CarouselSlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\Featurette.ascx.cs">
+      <DependentUpon>Featurette.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\Featurette.ascx.designer.cs">
+      <DependentUpon>Featurette.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\MainContainer.ascx.cs">
+      <DependentUpon>MainContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\MainContainer.ascx.designer.cs">
+      <DependentUpon>MainContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\HeaderNavigation.ascx.cs">
+      <DependentUpon>HeaderNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\HeaderNavigation.ascx.designer.cs">
+      <DependentUpon>HeaderNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\RelatedPages.ascx.cs">
+      <DependentUpon>RelatedPages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\RelatedPages.ascx.designer.cs">
+      <DependentUpon>RelatedPages.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\DataFolder.config" />
+    <Content Include="App_Config\Include\siteDefinition.config" />
+    <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -109,8 +177,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Config\Include\" />
-    <Folder Include="layouts\PageEditor\sublayouts\" />
+    <ProjectReference Include="..\PageEditor.Classes\PageEditor.Classes.csproj">
+      <Project>{a03b95b5-54d8-4d30-a82c-c8f4fed42dc1}</Project>
+      <Name>PageEditor.Classes</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
