@@ -67,10 +67,12 @@
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
+    <Compile Include="CreateContentFolder.cs" />
     <Compile Include="Models\Featurette.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Slide.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SublayoutParamHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />

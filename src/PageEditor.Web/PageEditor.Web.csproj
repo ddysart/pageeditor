@@ -169,6 +169,7 @@
     <Content Include="App_Config\Include\DataFolder.config" />
     <Content Include="App_Config\Include\siteDefinition.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
+    <Content Include="App_Config\Include\pipeline.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -3,7 +3,7 @@
 <hr class="featurette-divider">
 
 <div class="featurette">
-    <%=RenderImage(x => x.Image, new ImageParameters{MaxWidth = 200, MaxHeight = 200, Class = "featurette-image pull-right"}, true) %>
-    <h2 class="featurette-heading"><%=Editable(x => x.Heading) %></h2>
-    <p class="lead"><%=Editable(x => x.Subheading) %></p>
+    <sc:Image runat="server" Field="Image " ID="Image"/>
+    <h2 class="featurette-heading"><sc:FieldRenderer runat="server" ID="Heading"/></h2>
+    <p class="lead"><sc:FieldRenderer runat="server" ID="Lead"/></p>
 </div>
