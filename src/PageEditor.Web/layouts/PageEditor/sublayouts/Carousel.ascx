@@ -5,7 +5,7 @@
         <sc:placeholder runat="server" key="carousel-slides"></sc:placeholder>
         <!-- end carousel-slides -->
     </div>
-    <% if (IsInEditingMode)
+    <% if (!IsInEditingMode)
        { %>
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
