@@ -14,6 +14,7 @@ namespace PageEditor.Classes
         {
             Assert.IsNotNull(args, "args");
             var rendering = new Sitecore.Data.Items.RenderingItem(args.RenderingItem);
+
             var urlString = new UrlString(rendering.Parameters);
             var contentFolder = urlString.Parameters[ContentFolderTemplateParam];
             
@@ -25,25 +26,22 @@ namespace PageEditor.Classes
                 return;
             }
 
-            var text = args.RenderingItem["Datasource Location"];
-            
-            if (string.IsNullOrEmpty(text)) return;
+            string datasourceLocation = args.RenderingItem["Datasource Location"];
 
-            if (!text.StartsWith("./") || string.IsNullOrEmpty(args.ContextItemPath)) return;
-
-            var itemPath = args.ContextItemPath + text.Remove(0, 1);
-            
-            var item = args.ContentDatabase.GetItem(itemPath);
-            
-            var contextItem = args.ContentDatabase.GetItem(args.ContextItemPath);
-            
-            if (item == null || contextItem == null) return;
-            
-            var itemName = text.Remove(0, 2);
-
-            using (new SiteContextSwitcher(SiteContextFactory.GetSiteContext("system")))
+            if (!string.IsNullOrEmpty(datasourceLocation) && datasourceLocation.StartsWith("./") && !string.IsNullOrEmpty(args.ContextItemPath))
             {
-                contextItem.Add(itemName, new TemplateID(ID.Parse(contentFolder)));
+                var itemPath = args.ContextItemPath + datasourceLocation.Remove(0, 1);
+                var contentFolderItem = args.ContentDatabase.GetItem(itemPath);
+                var contextItem = args.ContentDatabase.GetItem(args.ContextItemPath);
+
+                if (contentFolderItem != null || contextItem == null) return;
+                
+                string itemName = datasourceLocation.Remove(0, 2);
+                
+                using (new SiteContextSwitcher(SiteContextFactory.GetSiteContext("system")))
+                {
+                    contextItem.Add(itemName, new TemplateID(ID.Parse(contentFolder)));
+                }
             }
         }
     }

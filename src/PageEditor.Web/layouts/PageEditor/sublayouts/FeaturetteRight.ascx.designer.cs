@@ -10,7 +10,7 @@
 namespace PageEditor.Web.layouts.PageEditor.sublayouts {
     
     
-    public partial class Featurette {
+    public partial class FeaturetteRight {
         
         /// <summary>
         /// Image control.
@@ -28,15 +28,15 @@ namespace PageEditor.Web.layouts.PageEditor.sublayouts {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Sitecore.Web.UI.WebControls.FieldRenderer Heading;
+        protected global::Sitecore.Web.UI.WebControls.Text Heading;
         
         /// <summary>
-        /// Lead control.
+        /// Subheading control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Sitecore.Web.UI.WebControls.FieldRenderer Lead;
+        protected global::Sitecore.Web.UI.WebControls.Text Subheading;
     }
 }

@@ -11,6 +11,7 @@ namespace PageEditor.Classes.Models
     [SitecoreType(AutoMap = true)]
     public class Featurette
     {
+
         public virtual string Heading { get; set; }
         public virtual string Subheading { get; set; }
         public virtual Image Image { get; set; }

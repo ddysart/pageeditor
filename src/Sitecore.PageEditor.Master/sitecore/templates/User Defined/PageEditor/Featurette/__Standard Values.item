@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {AEFDB7B9-1D52-471F-AE23-A8828DBF16AF}
+database: master
+path: /sitecore/templates/User Defined/PageEditor/Featurette/__Standard Values
+parent: {EF43E3CD-76CA-47DA-BB41-43183E83A15C}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {EF43E3CD-76CA-47DA-BB41-43183E83A15C}
+templatekey: Featurette
+
+----version----
+language: en
+version: 1
+revision: bb47d915-4519-4dba-83ba-0264e6cec4b3
+
+----field----
+field: {FB8B6E74-8E31-4ECE-B554-14B667578733}
+name: Heading
+key: heading
+content-length: 7
+
+Heading
+----field----
+field: {A73136E9-6C13-432F-84A7-0D888F71B790}
+name: Subheading
+key: subheading
+content-length: 10
+
+SubHeading
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20140721T211059
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bb47d915-4519-4dba-83ba-0264e6cec4b3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20140721T211111:635415738710756000
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

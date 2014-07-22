@@ -104,7 +104,8 @@
     <Content Include="layouts\PageEditor\MainLayout.aspx" />
     <Content Include="layouts\PageEditor\sublayouts\Carousel.ascx" />
     <Content Include="layouts\PageEditor\sublayouts\CarouselSlide.ascx" />
-    <Content Include="layouts\PageEditor\sublayouts\Featurette.ascx" />
+    <Content Include="layouts\PageEditor\sublayouts\FeaturetteLeft.ascx" />
+    <Content Include="layouts\PageEditor\sublayouts\FeaturetteRight.ascx" />
     <Content Include="layouts\PageEditor\sublayouts\MainContainer.ascx" />
     <Content Include="layouts\PageEditor\sublayouts\HeaderNavigation.ascx" />
     <Content Include="layouts\PageEditor\sublayouts\RelatedPages.ascx" />
@@ -135,12 +136,19 @@
     <Compile Include="layouts\PageEditor\sublayouts\CarouselSlide.ascx.designer.cs">
       <DependentUpon>CarouselSlide.ascx</DependentUpon>
     </Compile>
-    <Compile Include="layouts\PageEditor\sublayouts\Featurette.ascx.cs">
-      <DependentUpon>Featurette.ascx</DependentUpon>
+    <Compile Include="layouts\PageEditor\sublayouts\FeaturetteLeft.ascx.cs">
+      <DependentUpon>FeaturetteLeft.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="layouts\PageEditor\sublayouts\Featurette.ascx.designer.cs">
-      <DependentUpon>Featurette.ascx</DependentUpon>
+    <Compile Include="layouts\PageEditor\sublayouts\FeaturetteLeft.ascx.designer.cs">
+      <DependentUpon>FeaturetteLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\FeaturetteRight.ascx.cs">
+      <DependentUpon>FeaturetteRight.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\PageEditor\sublayouts\FeaturetteRight.ascx.designer.cs">
+      <DependentUpon>FeaturetteRight.ascx</DependentUpon>
     </Compile>
     <Compile Include="layouts\PageEditor\sublayouts\MainContainer.ascx.cs">
       <DependentUpon>MainContainer.ascx</DependentUpon>
