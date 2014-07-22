@@ -28,7 +28,9 @@ namespace PageEditor.Classes
 
             string datasourceLocation = args.RenderingItem["Datasource Location"];
 
-            if (!string.IsNullOrEmpty(datasourceLocation) && datasourceLocation.StartsWith("./") && !string.IsNullOrEmpty(args.ContextItemPath))
+            if (!string.IsNullOrEmpty(datasourceLocation) && 
+                datasourceLocation.StartsWith("./") && 
+                !string.IsNullOrEmpty(args.ContextItemPath))
             {
                 var itemPath = args.ContextItemPath + datasourceLocation.Remove(0, 1);
                 var contentFolderItem = args.ContentDatabase.GetItem(itemPath);

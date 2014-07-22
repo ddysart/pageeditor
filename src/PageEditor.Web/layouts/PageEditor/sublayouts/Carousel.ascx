@@ -1,9 +1,7 @@
 ﻿<%@ control language="C#" autoeventwireup="true" codebehind="Carousel.ascx.cs" inherits="PageEditor.Web.layouts.PageEditor.sublayouts.Carousel" %>
 <div id="myCarousel" class="carousel slide">
-    <div class="carousel-inner <%=IsInEditingMode ? "edit" : string.Empty %>">
-        <!-- begin carousel-slides -->
+    <div class="carousel-inner<%=Sitecore.Context.PageMode.IsPageEditor ? " edit" : string.Empty %>">
         <sc:placeholder runat="server" key="carousel-slides"></sc:placeholder>
-        <!-- end carousel-slides -->
     </div>
     <% if (!IsInEditingMode)
        { %>
