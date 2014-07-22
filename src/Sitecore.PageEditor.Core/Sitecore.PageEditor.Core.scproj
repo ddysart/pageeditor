@@ -30,12 +30,13 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreWebUrl>http://pageditor.dev.hansondodge.com</SitecoreWebUrl>
-    <InstallSitecoreConnector>False</InstallSitecoreConnector>
+    <SitecoreWebUrl>http://pageeditor.dev.hansondodge.com/</SitecoreWebUrl>
+    <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
     <SitecoreDeployFolder>C:\Sitecore\PageEditor\Website</SitecoreDeployFolder>
     <EnableValidations>False</EnableValidations>
     <ValidationSettingsFilePath>.\Sitecore.PageEditor.Core_Debug.xml</ValidationSettingsFilePath>
+    <SitecoreAccessGuid>909faf34-3016-46e2-bd9c-aca5543f457c</SitecoreAccessGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -52,6 +53,30 @@
   </ItemGroup>
   <ItemGroup>
     <ExcludedAssemblies Include="Sitecore.%2a.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\content.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Applications.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Applications\WebEdit.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Applications\WebEdit\Custom Experience Buttons.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Applications\WebEdit\Custom Experience Buttons\Carousel Fields.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Applications\WebEdit\Custom Experience Buttons\Related Pages.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
 </Project>
